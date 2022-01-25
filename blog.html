@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="marginleft">My Blog</h1>
+      <div class="sidebar-class" id="sidebar" style="display: none">
+        <button onclick="sidebar_close()" id="closebutton">
+          Close &times;
+        </button>
+        <br />
+        <a href="#" class="sidebar-item" id="sidebar-item1">Musings on Life</a>
+        <br />
+        <a href="#" class="sidebar-item">Data Science Spiels</a> <br />
+        <a href="#" class="sidebar-item">Miscellaneous Stories</a>
+      </div>
+      <div>
+        <button onclick="sidebar_open()" class="sidebarbutton">☰</button>
+      </div>
+      <a class="marginleft" href="index.html">Home Page</a>
+      <hr class="lefthr" style="width: 90%" />
+      <p class="marginleft">
+        Hello and welcome to my blog! Written content will begin populating
+        these pages over the next couple months, so please stay tuned!
+      </p>
+      <h2 class="marginleft">Introduction:</h2>
+      <p class="marginleft blogdate">Jan 22, 2022</p>
+      <p class="marginleft blogtext">
+        Welcome welcome! This is a test post for the time being, for formatting
+        and whatnot. Feel free to explore and click around! You can use the
+        sidebar on the top right to navigate. As of right now, there isn't
+        really much to look at, but that should change very fast.
+      </p>
+      <hr class="lefthr" style="width: 85%" />
+      <div class="push"></div>
+    </div>
+    <footer id="copyright" ;>
+      Copyright &copy; 2022 Terry M. All Rights Reserved
+    </footer>
+    <script>
+      function sidebar_open() {
+        document.getElementById("sidebar").style.display = "block";
+      }
+
+      function sidebar_close() {
+        document.getElementById("sidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
