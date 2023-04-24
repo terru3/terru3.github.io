@@ -87,13 +87,13 @@ author:
   bio              : "Hi!"
   location         : "Los Angeles, CA"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  # googlescholar    : "http://yourfullgooglescholarurl.com"
+  email            : "terru3@ucla.edu"
+  # researchgate     :  example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   github           : "terru3"
-  google_plus      :
+  # google_plus      :
   linkedin         : "https://www.linkedin.com/in/terry-m3/"
 
 # Reading Files
