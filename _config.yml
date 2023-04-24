@@ -7,7 +7,6 @@
 
 # Site Settings
 locale                   : "en-US"
-minimal_mistakes_skin    : "dark" 
 title                    : "Terry Ming"
 title_separator          : "-"
 name                     : &name "Terry Ming"
