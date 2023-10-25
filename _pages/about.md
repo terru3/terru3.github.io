@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-Hello! My name is Terry Ming and I an an applied math, statistics and data science student at UCLA.
+Hello! My name is Terry Ming and I am an applied math, statistics and data science student at UCLA.
