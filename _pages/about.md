@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "what"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,8 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-What
-
-What
-======
-What
+Hello! My name is Terry Ming and I an an applied math, statistics and data science student at UCLA.
