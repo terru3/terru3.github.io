@@ -7,10 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-minimal_mistakes_skin    : "dark"
 title                    : "Terry Ming"
 title_separator          : "-"
-subtitle                 : "bruh"
+subtitle                 : "?"
 name                     : &name "Terry Ming"
 description              : &description "A personal website in progress"
 url                      : https://terru3.github.io
@@ -84,10 +83,9 @@ analytics:
 author:
   name             : "Terry M."
   avatar           : "profile.png"
-  bio              : "Hi!"
+  bio              : "Applied Math + Stats/DS @ UCLA | Former Data Science Intern @ Snowflake"
   location         : "Los Angeles, CA"
   employer         :
-  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   # googlescholar    : "http://yourfullgooglescholarurl.com"
   email            : "terru3@ucla.edu"
   # researchgate     :  example: "https://www.researchgate.net/profile/yourprofile"
