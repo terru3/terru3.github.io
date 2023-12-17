@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Applied Mathematics, University of California Los Angeles (UCLA), June 2024 (expected)
+* B.S. in Applied Mathematics, University of California Los Angeles (UCLA), June 2024 (expected)  
   *Statistics Minor, Specialization in Computing*
 * Cumulative GPA: 4.00
 * Relevant Coursework: Linear Algebra, Optimization, Machine Learning, Algorithms, Mathematical Modeling, Differential Equations, Numerical Analysis, Discrete Structures, Real Analysis, Complex Analysis
