@@ -9,6 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
+<iframe src="/files/Terry_Ming_Curriculum_Vitae.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+
+To download a PDF copy of my CV, click [here](/files/Terry_Ming_Curriculum_Vitae.pdf).
+
 Education
 ======
 * B.S. in Applied Mathematics, University of California Los Angeles (UCLA), June 2024 (expected)  
