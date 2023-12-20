@@ -25,35 +25,35 @@ complexity. I'll walk through a few examples of what this means, which will hope
 Self-attention
 ======
 
-  Why attend to itself?
-  ------
+Why attend to itself?
+------
   
-  Q, K, V?
-  ------
+Q, K, V?
+------
   
-  Other attentions (sliding window, block-sparse, attention sinks)
-  ------
+Other attentions (sliding window, block-sparse, attention sinks)
+------
   
-  MQA/GQA
-  ------
+MQA/GQA
+------
   
 Quantization
 ======
 
-  Model.half()?
-  ------
+Model.half()?
+------
   
-  Post-Training Quantization (PTQ) vs. Quantization-Aware Training (QAT)
-  ------
+Post-Training Quantization (PTQ) vs. Quantization-Aware Training (QAT)
+------
 
 CANs (Creative Adversarial Networks)
 ======
 
-  GAN basics
-  ------
+GAN basics
+------
   
-  How to be creative?
-  ------
+How to be creative?
+------
 
 
 
