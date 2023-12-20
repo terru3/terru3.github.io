@@ -1,7 +1,7 @@
 ---
 title: 'Learning DS / ML Concepts'
 date: 2023-12-20
-permalink: /posts/2023/20/learning-ds-ml
+permalink: /posts/2023/12/learning-ds-ml
 excerpt_separator: <!--more-->
 toc: true
 tags:
