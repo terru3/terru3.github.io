@@ -22,27 +22,38 @@ Therefore, I believe to truly grasp concepts, we need to view it from all three 
 why it works (math), and how it is developed in practice (code). Of course, depending on the content, these components will differ in
 complexity. I'll walk through a few examples of what this means, which will hopefully illuminate this formulation.
 
-# Self-attention
+Self-attention
+======
 
-  ## Why attend to itself?
+  Why attend to itself?
+  ------
   
-  ## Q, K, V?
+  Q, K, V?
+  ------
   
-  ## Other attentions (sliding window, block-sparse, attention sinks)
+  Other attentions (sliding window, block-sparse, attention sinks)
+  ------
   
-  ## MQA/GQA
+  MQA/GQA
+  ------
   
-# Quantization
+Quantization
+======
 
-  ## Model.half()?
+  Model.half()?
+  ------
   
-  ## Post-Training Quantization (PTQ) vs. Quantization-Aware Training (QAT)
+  Post-Training Quantization (PTQ) vs. Quantization-Aware Training (QAT)
+  ------
 
-# CANs (Creative Adversarial Networks)
+CANs (Creative Adversarial Networks)
+======
 
-  ## GAN basics
+  GAN basics
+  ------
   
-  ## How to be creative?
+  How to be creative?
+  ------
 
 
 
