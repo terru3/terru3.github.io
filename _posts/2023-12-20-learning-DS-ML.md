@@ -24,6 +24,8 @@ complexity. Moreover, it's best to alternate in waves——begin with the overar
 
 Self-attention
 ======
+*Attention Is All You Need, Vaswani et al. 2017*  
+*https://arxiv.org/abs/1706.03762*
 
 For example, what is self-attention? 
 
@@ -44,7 +46,7 @@ Machines don't understand text—they understand numbers. As this post assumes, 
 
 This immediately poses a problem. In the sentence: "He was told to bar him from ever entering the bar again", clearly "bar" refers to different entities; in fact, they are not even the same part of speech. If we want our model to understand the nuances of language, it cannot statically represent letters/words/anything-in-between as fixed vectors.
 
-How did we know the first "bar" *(bar1)* was a verb meaning to prohibit and the second "bar" *(bar2)* was a noun referring to an establishment serving alcohol? We read the surrounding words, saw that *bar1* preceded a noun, and saw *bar* preceded by the verb "enter"...you get the point. At this point, self-attention is ready to burst onto the scene, because it exactly represents a proposal to emulate this process.
+How did we know the first "bar" *(bar1)* was a verb meaning to prohibit and the second "bar" *(bar2)* was a noun referring to an establishment serving alcohol? We read the surrounding words, saw that *bar1* preceded a noun, and saw *bar* preceded by the verb "enter"...you get the point. At this point, self-attention is ready to make its appearance, because it exactly represents a proposal to emulate this process.
 
   **Mathematically:**
 
@@ -52,7 +54,7 @@ If we want our tokens to communicate with each other (in other words, perform so
 
 The glaring issue with this approach is that it's too aggressive. Each sentence now just consists of a single numeric vector repeated across every token—we want each specific token to have a unique representation depending on how it relates to the others.
 
-Approach 2: Dot products! As we know, the dot product of vectors $a$ and $b$ is defined as: $a⋅b = |a||b|cos(θ)$. The higher the dot product, the closer in angle...or larger magnitude. We don't want the magnitude of the pretty much arbitrary embeddings messing with our notion of importance, so we'll be sure to scale the dot products by some fixed dimensionality (more on that later!) With this, then, we are able to capture a rough snapshot of say, given token x3, how similar and thus important x1, x2, x4, x5, etc. are to its meaning.
+Approach 2: Dot products! As we know, the dot product of vectors $a$ and $b$ is defined as: $a⋅b = |a||b|cos(θ)$. The higher the dot product, the closer in angle...or larger magnitude. We don't want the magnitude of our embeddings messing with our notion of importance, so we'll be sure to scale the dot products by some fixed dimensionality (more on that later!) With this, then, we are able to capture a rough snapshot of say, given token x3, how similar and thus important x1, x2, x4, x5, etc. are to its meaning.
 
   **Code:** We'll skip this for now.
 
@@ -105,10 +107,25 @@ Note: There are many differing implementations of self-attention, some of which 
   
 Other attentions (sliding window, block-sparse, attention sinks)
 ------
+
   
 MQA/GQA
 ------
+*Fast Transformer Decoding: One Write-Head is All You Need, Noam Shazeer 2019*  
+*https://arxiv.org/abs/1911.02150*  
+*GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints, Ainslie et al. 2023*  
+*https://arxiv.org/abs/2305.13245*
+
+Finally, let's tackle a useful recent optimization—*multi-query attention (MQA)* and *grouped query attention (GQA)*.
+
+  **Conceptually:** Motivation: Training an auto-regressive model is sunshine and rainbows because of its trivial parallelizability, but we can't really say the same about inference. Typically when we generate text from such a model (i.e. *autoregressive decoding*), we need to perform a full forward pass through the entire model to sample just one token, and then repeat to sample the second, and so on, which is exceedingly slow. One can imagine with large dimensionality, repeatedly loading the keys and values becomes extremely tedious and memory-intensive.
+
+  Proposal: 
   
+  **Mathematically:**
+  **Code:**
+
+    
 Quantization
 ======
 
@@ -118,9 +135,7 @@ Model.half()?
 Post-Training Quantization (PTQ) vs. Quantization-Aware Training (QAT)
 ------
 
-
-
-
+*Credits: _________*
 
 
 
