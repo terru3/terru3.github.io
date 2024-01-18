@@ -54,7 +54,7 @@ If we want our tokens to communicate with each other (in other words, perform so
 
 The glaring issue with this approach is that it's too aggressive. Each sentence now just consists of a single numeric vector repeated across every token—we want each specific token to have a unique representation depending on how it relates to the others.
 
-Approach 2: Dot products! As we know, the dot product of vectors $a$ and $b$ is defined as: $a⋅b = |a||b|cos(θ)$. The higher the dot product, the closer in angle...or larger magnitude. We don't want the magnitude of our embeddings messing with our notion of importance, so we'll be sure to scale the dot products by some fixed dimensionality (more on that later!) With this, then, we are able to capture a rough snapshot of say, given token x3, how similar and thus important x1, x2, x4, x5, etc. are to its meaning.
+Approach 2: Dot products! As we know, the dot product of vectors $a$ and $b$ is defined as: $a⋅b = &#124;a&#124;&#124;b&#124;cos(θ)$. The higher the dot product, the closer in angle...or larger magnitude. We don't want the magnitude of our embeddings messing with our notion of importance, so we'll be sure to scale the dot products by some fixed dimensionality (more on that later!) With this, then, we are able to capture a rough snapshot of say, given token x3, how similar and thus important x1, x2, x4, x5, etc. are to its meaning.
 
   **Code:** We'll skip this for now.
 
