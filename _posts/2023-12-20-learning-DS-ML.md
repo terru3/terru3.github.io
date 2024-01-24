@@ -59,13 +59,11 @@ Approach 2: Dot products! As we know, the dot product of vectors $a$ and $b$ is 
 Q, K, V?
 ------
 
-**In progress!**
-
   **Conceptually:** Alas, we've run into another problem of sorts. If we're just dotting x with itself, then each token $x_i$ will always be most similar to itself, drowning out the actually useful similarity outputs being reported with $x_i⋅x_{i-1}$, $x_i⋅x_0$, etc. Conceptually, failing to scale our dot product will also cause a similar issue. To break this symmetry, we introduce learnable *projections* of x—in other words, matrices we call the *query (Q)*, *key (K)*, and *value (V)*, that will actually allow the model to incorporate contextual information surrounding $x_i$.
 
   Note: In multi-head attention (MHA), this process is decomposed, wherein we have multiple sets of $Q$, $K$, and $V$, and the results are simply concatenated and projected back to our output dimension, which enables trivial parallelization and thus training and inference speeds as well as allowing the model to, in a sense, learn different "representation subspaces". We won't worry about the details in implementing this.
 
-  Great, so we're almost done. But in the case of autoregressive language generation (which is the setting we focus on here), we're given some prefix tokens $x_0, x_1,...,x_i$ and we want to predict the next token. A super clever way of training such models very efficiently is via a *teacher forcing* setup, where we simply give our model a complete tokenized sentence as both the input and target, but *shift* the target sequence by one. What this accomplishes is that now when our model looks at token 1, its target is token 2, and when it sees tokens 1 and 2 together, its target is now token 3, and so on. In this way, we can train in parallel on entire sequences at once rather than computing outputs sequentially at each step.
+  Great, so we're almost done. But in the case of autoregressive language generation (which is the setting we focus on here), we're given some prefix tokens $x_0, x_1,...,x_i$ and we want to predict the next token $x_{i+1}$. A super clever way of training such models very efficiently is via a *teacher forcing* setup, where we simply give our model a complete tokenized sentence as both the input and target, but *shift* the target sequence by one. What this accomplishes is that now when our model looks at token 1, its target is token 2, and when it sees tokens 1 and 2 together, its target is now token 3, and so on. In this way, we can train in parallel on entire sequences at once rather than computing outputs sequentially at each step.
 
   original sequence: $[x_1, x_2, x_3, x_4]$  
   input: $[x_1]$           || target: $[x_2]$  
@@ -74,7 +72,7 @@ Q, K, V?
 
   Now, to do this, obviously, we can't allow the model to cheat and view tokens beyond the context that it's given.
 
-  NOT DONE
+**In progress!**
  
   **Mathematically:**
 
@@ -118,7 +116,7 @@ return out
 
 Note: There are many differing implementations of self-attention, some of which down-project their $q, k, v$, some of which accept separate $q, k, v$ as input rather than $x$, etc., this is simply one method.
   
-Other attentions (sliding window, block-sparse, attention sinks)
+Other attentions (sliding window, block-sparse)
 ------
 
   
@@ -138,7 +136,13 @@ Finally, let's tackle a useful recent optimization—*multi-query attention (MQA
   **Mathematically:**
   **Code:**
 
-    
+
+Attention Sinks
+======
+*Efficient Streaming Language Models w/ Attention Sinks, Xiao et al. 2023*  
+*https://arxiv.org/abs/2309.17453*
+
+
 Quantization
 ======
 
